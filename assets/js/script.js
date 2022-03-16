@@ -108,7 +108,7 @@
     function heroSlider() {
         if ($(".hero-slider").length) {
             $(".hero-slider").slick({
-                // autoplay: true,
+                autoplay: true,
                 autoplaySpeed: 6000,
                 pauseOnHover: true,
                 arrows: true,
@@ -120,6 +120,7 @@
             });
         }
     }
+ 
 
 
     $("body").on("click", function () {
@@ -567,7 +568,42 @@
         });
     }
 
-
+    $('.portfolio-slider').slick({
+        dots: true,
+        arrows:false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
     /*------------------------------------------
         = Testimonial SLIDER
     -------------------------------------------*/
@@ -587,8 +623,8 @@
     /*------------------------------------------
         = Testimonial SLIDER
     -------------------------------------------*/
-    if ($(".wpo-service-slider").length) {
-        $(".wpo-service-slider").owlCarousel({
+    if ($(".portfolior").length) {
+        $(".portfolior").owlCarousel({
             autoplay: false,
             smartSpeed: 300,
             margin: 20,
@@ -615,10 +651,6 @@
 
                 1200: {
                     items: 3
-                },
-
-                1400: {
-                    items: 4
                 },
 
             }

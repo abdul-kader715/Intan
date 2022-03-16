@@ -4637,13 +4637,13 @@ img {
 
 @media (max-width: 767px) {
   .wpo-site-about-section .about-wrap {
-    padding: 0 40px  80px 40px;
+    padding: 0 40px 80px 40px;
   }
 }
 
 @media (max-width: 575px) {
   .wpo-site-about-section .about-wrap {
-    padding: 0 10px  60px 10px;
+    padding: 0 10px 60px 10px;
   }
 }
 
@@ -5581,6 +5581,26 @@ img {
   font-weight: 400;
   line-height: 18px;
   color: #B9B900;
+}
+
+.wpo-site-portfolio-section .portfolio-wrap .portfolio-slider .slick-dots {
+  bottom: -60px;
+}
+
+.wpo-site-portfolio-section .portfolio-wrap .portfolio-slider .slick-dots li button {
+  border-radius: 50px;
+  width: 12px;
+  height: 12px;
+  background: #D6D66C;
+  outline: none;
+}
+
+.wpo-site-portfolio-section .portfolio-wrap .portfolio-slider .slick-dots li button:before {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  background: #fff;
 }
 
 .wpo-site-testimonial-section {
