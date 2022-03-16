@@ -1,0 +1,155 @@
+.theme-btn {
+	button {
+		display: inline-block;
+		position: relative;
+		border: 1px transparent;
+		color: $white;
+		cursor: pointer;
+		background:$theme-primary-color-s2;
+		font-family: $base-font;
+		font-size: 16px;
+		font-weight: 400;
+		transition: all .4s ease-in-out;
+	}
+
+	span {
+		display: block;
+		padding: 22px 40px;
+		@media (max-width:767px) {
+			padding: 15px 40px;  
+		  }
+	}
+
+	button::before,
+	button::after {
+		content: "";
+		width: 0;
+		height: 1px;
+		position: absolute;
+		transition: all 0.2s linear;
+		background: $theme-primary-color-s2;
+	}
+
+	span::before,
+	span::after {
+		content: "";
+		width: 1px;
+		height: 0;
+		position: absolute;
+		transition: all 0.2s linear;
+		background: $theme-primary-color-s2;
+	}
+	button:hover{
+		background: transparent;
+	}
+	button:hover::before,
+	button:hover::after {
+		width: 100%;
+	}
+
+	button:hover span::before,
+	button:hover span::after {
+		height: 100%;
+	}
+
+	.btn-5::after {
+		left: 0;
+		bottom: 0;
+		transition-duration: 0.4s;
+	}
+
+	.btn-5 span::after {
+		right: 0;
+		top: 0;
+		transition-duration: 0.4s;
+	}
+
+	.btn-5::before {
+		right: 0;
+		top: 0;
+		transition-duration: 0.4s;
+	}
+
+	.btn-5 span::before {
+		left: 0;
+		bottom: 0;
+		transition-duration: 0.4s;
+	}
+
+
+
+
+	@include media-query(991px) {
+		font-size: 18px;
+		font-size: calc-rem-value(18);
+	}
+
+	@include media-query(767px) {
+		padding: 12px 18px;
+		font-size: 14px;
+	}
+}
+
+.theme-btn-s2 {
+	background: $body-bg-color;
+	color: $black;
+	display: inline-block;
+	padding: 17px 30px;
+	text-transform: capitalize;
+	font-family: $base-font;
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 0.18em;
+
+
+
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $black;	
+	}
+
+	&:hover:after {
+		opacity: 1;
+	}
+
+	@include media-query(767px) {
+		padding: 12px 18px;
+		font-size: 13px;
+	}
+}
+
+
+
+.view-cart-btn {
+	@extend .theme-btn;
+	display: block;
+	margin-top: 15px;
+	border-radius: 5px;
+	padding: 10px 45px;
+
+
+
+	&:after {
+		display: none;
+	}
+
+	&:hover {
+		background-color: darken($theme-primary-color, 8%);
+	}
+
+	&.s1 {
+		background: #ddd;
+
+		&:hover {
+			background-color: darken(#ddd, 8%);
+		}
+	}
+
+}
