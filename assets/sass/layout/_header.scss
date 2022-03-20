@@ -1167,6 +1167,8 @@
 				color: $white;
 				font-weight: 400;
 				position: relative;
+				font-family: $base-font;
+				letter-spacing: 0.18em;
 
 				@media(max-width:1870px) {
 					padding: 35px 18px;
@@ -1193,6 +1195,8 @@
 				display: inline-block;
 				padding: 10px 15px;
 				color: $dark-gray;
+				font-family: $base-font;
+				letter-spacing: 0.18em;
 				position: relative;
 				overflow: hidden;
 				font-weight: 400;
@@ -1618,6 +1622,8 @@
 
 	#navbar>ul>li>a {
 		color: $white;
+
+		
 	}
 
 	.header-right .cart-toggle-btn,
