@@ -2602,7 +2602,7 @@ img {
     position: relative;
   }
   .wpo-site-header #navbar > ul > li > a {
-    font-size: 16px;
+    font-size: 14px;
     padding: 35px 20px;
     display: block;
     color: #fff;
@@ -2956,7 +2956,7 @@ img {
 
 @media (max-width: 1200px) {
   .wpo-site-header #navbar > ul > li > a {
-    padding: 30px 12px;
+    padding: 30px 11px;
     font-size: 16px;
   }
   .wpo-site-header .header-right .theme-btn, .wpo-site-header .header-right .view-cart-btn {
@@ -4246,7 +4246,7 @@ img {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: .95;
+  opacity: .86;
 }
 
 .wpo-site-footer ul {
@@ -4271,7 +4271,7 @@ img {
 
 @media (max-width: 991px) {
   .wpo-site-footer .wpo-upper-footer {
-    padding: 50px 0 0;
+    padding: 69px 0 0;
   }
 }
 
@@ -4671,7 +4671,7 @@ img {
   padding-right: 50px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .wpo-site-about-section .about-wrap .about-left {
     padding-right: 0;
   }
@@ -4683,7 +4683,7 @@ img {
 
 @media (max-width: 991px) {
   .wpo-site-about-section .about-wrap .about-text {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 }
 
@@ -4825,7 +4825,7 @@ img {
 @media (max-width: 991px) {
   .wpo-site-service-section .service-wrap .service-item {
     margin-bottom: 30px;
-    padding: 30px 50px;
+    padding: 30px;
   }
 }
 
@@ -5087,12 +5087,18 @@ img {
 
 .wpo-site-team-section {
   background: #fff;
-  padding-bottom: 80px;
+  padding-bottom: 90px;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 991px) {
   .wpo-site-team-section {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wpo-site-team-section {
+    padding-bottom: 30px;
   }
 }
 
@@ -5579,6 +5585,7 @@ img {
 
 .wpo-site-portfolio-section .portfolio-wrap .portfolio-item {
   padding: 30px;
+  position: relative;
   text-align: center;
   border: 1px solid #D3D35A;
   -webkit-transition: all .4s ease-in-out;
@@ -5601,71 +5608,104 @@ img {
   border-top: 1px solid #fff;
 }
 
-.wpo-site-portfolio-section .portfolio-wrap .portfolio-item:hover .portfolio-img .portfolio-text {
+.wpo-site-portfolio-section .portfolio-wrap .portfolio-item:hover .portfolio-img::before {
+  opacity: 0.6;
+}
+
+.wpo-site-portfolio-section .portfolio-wrap .portfolio-item:hover .portfolio-text {
   opacity: 1;
-  visibility: visible;
-  -webkit-transform: scale(100%);
-          transform: scale(100%);
 }
 
 .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-img {
   position: relative;
-  z-index: 1;
+  z-index: -1;
+  width: 100%;
+}
+
+.wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-img::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background: #000;
+  opacity: 0;
 }
 
 .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-img img {
   width: 100%;
 }
 
-.wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-img .portfolio-text {
+.wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-text {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  left: 40px;
+  top: 170px;
+  -webkit-transform: translate(10px, 10px);
+          transform: translate(10px, 10px);
   z-index: 1;
-  padding: 180px 0;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   opacity: 0;
-  visibility: hidden;
-  -webkit-transform: scale(0);
-          transform: scale(0);
 }
 
-@media (max-width: 1199px) {
-  .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-img .portfolio-text {
-    padding: 100px 0;
+@media (max-width: 1399px) {
+  .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-text {
+    left: 20px;
+    top: 120px;
   }
 }
 
-@media (max-width: 4790px) {
-  .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-img .portfolio-text {
-    padding: 200px 0;
+@media (max-width: 1199px) {
+  .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-text {
+    left: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-text {
+    left: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-text {
+    left: 0;
+    top: 90px;
+  }
+}
+
+@media (max-width: 574px) {
+  .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-text {
+    left: 108px;
+    top: 280px;
+  }
+}
+
+@media (max-width: 500px) {
+  .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-text {
+    left: 78px;
+    top: 165px;
   }
 }
 
 @media (max-width: 400px) {
-  .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-img .portfolio-text {
-    padding: 150px 0;
+  .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-text {
+    left: 64px;
+    top: 165px;
   }
 }
 
-.wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-img .portfolio-text::before {
-  position: absolute;
-  content: '';
-  background: #000;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: .6;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+@media (max-width: 350px) {
+  .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-text {
+    left: 27px;
+    top: 122px;
+  }
 }
 
-.wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-img .portfolio-text h3 a {
+.wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-text h3 a {
   font-family: "Koh Santepheap", cursive;
   font-size: 24px;
   font-weight: 400;
@@ -5673,7 +5713,21 @@ img {
   color: #fff;
 }
 
-.wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-img .portfolio-text span {
+@media (max-width: 1199px) {
+  .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-text h3 a {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-text h3 a {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+.wpo-site-portfolio-section .portfolio-wrap .portfolio-item .portfolio-text span {
   font-family: "Roboto", sans-serif;
   font-size: 17px;
   font-weight: 400;
